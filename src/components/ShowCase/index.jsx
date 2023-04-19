@@ -5,6 +5,8 @@ import {
 } from '../../redux/service/cardServices'
 import { useEffect } from 'react'
 import { AiOutlineArrowDown } from 'react-icons/ai'
+import Card from '../Card'
+import Loading from '../Loading'
 
 function ShowCase() {
   const starsShips = useSelector((state) => state.cards.data)
@@ -21,17 +23,9 @@ function ShowCase() {
     }
   }
   return (
-    <div>
-      <div>
-        {!loading ? (
-          starsShips?.results?.map((starShip, i) => {
-            return <h3 key={i}>{starShip.name}</h3>
-          })
-        ) : (
-          <div>
-            <h1>Loading</h1>
-          </div>
-        )}
+    <>
+      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 place-content-center gap-4 mb-4 lg:gap-6">
+        {!loading ? <Card /> : <Loading />}
       </div>
 
       {!loadMore ? (
@@ -46,9 +40,9 @@ function ShowCase() {
           <AiOutlineArrowDown size={25} />
         </button>
       ) : (
-        <h2>Loading</h2>
+        <Loading />
       )}
-    </div>
+    </>
   )
 }
 export default ShowCase

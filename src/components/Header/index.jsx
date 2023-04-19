@@ -18,7 +18,7 @@ function Header() {
   }
 
   return (
-    <>
+    <div className="w-full mb-10 flex flex-col justify-center items-center">
       <img
         src="https://www.freeiconspng.com/uploads/star-wars-logo-png-image-0.png"
         alt="logo"
@@ -30,6 +30,7 @@ function Header() {
           className="w-[400px] h-10 outline-none rounded-lg p-2 text-indigo-800"
           onChange={(e) => setVal(e.target.value)}
           value={val}
+          placeholder="Enter starship name or model"
         />
         <button
           onClick={getDataBySearchValue}
@@ -38,7 +39,7 @@ function Header() {
           Filter
         </button>
       </form>
-    </>
+    </div>
   )
 }
 export default Header

@@ -1,0 +1,36 @@
+import { useSelector } from 'react-redux'
+
+function Card() {
+  const starsShips = useSelector((state) => state.cards.data.results)
+  return (
+    <>
+      {starsShips?.map((starsShip, i) => {
+        return (
+          <div
+            className="max-w-xs bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 hover:scale-105 cursor-pointer"
+            key={i}
+          >
+            <a href="#">
+              <img className="rounded-t-lg" src="/starsship.webp" alt="" />
+            </a>
+            <div className="p-5">
+              <a href="#">
+                <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+                  {starsShip?.name}
+                </h5>
+              </a>
+              <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
+                <span className="font-semibold text-gray-400">Model:</span>
+                {starsShip?.model}
+              </p>
+              <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
+                Hyperdrive Rating:{starsShip?.hyperdrive_rating}
+              </p>
+            </div>
+          </div>
+        )
+      })}
+    </>
+  )
+}
+export default Card
