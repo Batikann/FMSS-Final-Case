@@ -7,6 +7,7 @@ import { useEffect } from 'react'
 import { AiOutlineArrowDown } from 'react-icons/ai'
 import Card from '../Card'
 import Loading from '../Loading'
+import Skeleton from '../Skeleton'
 
 function ShowCase() {
   const starsShips = useSelector((state) => state.cards.data)
@@ -25,7 +26,7 @@ function ShowCase() {
   return (
     <>
       <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 place-content-center gap-4 mb-4 lg:gap-6">
-        {!loading ? <Card /> : <Loading />}
+        {!loading ? <Card /> : <Skeleton />}
       </div>
 
       {!loadMore ? (
