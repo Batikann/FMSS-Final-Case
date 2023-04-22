@@ -13,9 +13,9 @@ function Skeleton() {
               />
 
               <div className="p-5">
-                <h5 className="mb-2 w-48 h-6 bg-gray-300 rounded-md"></h5>
-                <p className="mb-3 w-36 h-6 bg-gray-300 rounded-md "></p>
-                <p className="mb-3 w-28 h-6 bg-gray-300 rounded-md"></p>
+                <h5 className="mb-2 md:w-48 w-32 h-6 bg-gray-300 rounded-md"></h5>
+                <p className="mb-3 md:w-36 w-24 h-6 bg-gray-300 rounded-md "></p>
+                <p className="mb-3 md:w-28 w-20 h-6 bg-gray-300 rounded-md"></p>
               </div>
             </div>
           </div>

@@ -1,3 +1,17 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+  .info {
+    @apply flex flex-col gap-y-4 justify-center;
+  }
+
+  .info span {
+    @apply font-bold text-xl mr-2;
+  }
+
+  .info p {
+    @apply font-medium text-lg;
+  }
+}
