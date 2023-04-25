@@ -5,7 +5,7 @@ export default {
   theme: {
     extend: {
       backgroundImage: {
-        darkMode: "url('./home-background.jpg')",
+        darkMode: "url('./src/assets/home-background.jpg')",
         error: "url('./404page.jpg')",
       },
     },
