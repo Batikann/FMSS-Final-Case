@@ -2,17 +2,18 @@ import { useDispatch, useSelector } from 'react-redux'
 import {
   fetchAllStartsShips,
   fetchLoadMoreData,
-} from '../../redux/service/cardServices'
+} from '@/redux/service/cardServices'
 import { useEffect } from 'react'
 import { AiOutlineArrowDown } from 'react-icons/ai'
 import Card from '../Card'
 import Loading from '../Loading'
 import Skeleton from '../Skeleton'
+import { useLoadMore, useLoading, useShips } from '@/redux/card/cardSlice'
 
 function ShowCase() {
-  const starsShips = useSelector((state) => state.cards.data)
-  const loading = useSelector((state) => state.cards.isLoading)
-  const loadMore = useSelector((state) => state.cards.isLoadNewData)
+  const starsShips = useSelector(useShips)
+  const loading = useSelector(useLoading)
+  const loadMore = useSelector(useLoadMore)
   const dispatch = useDispatch()
   useEffect(() => {
     dispatch(fetchAllStartsShips())

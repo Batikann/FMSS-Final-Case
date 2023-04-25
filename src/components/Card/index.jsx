@@ -1,9 +1,10 @@
 import { useSelector } from 'react-redux'
 import { Link } from 'react-router-dom'
-import { convertNameToPathName } from '../../utils/starsShips'
+import { convertNameToPathName } from '@/utils/starsShips'
+import { useShipsResults } from '@/redux/card/cardSlice'
 
 function Card() {
-  const starsShips = useSelector((state) => state.cards.data.results)
+  const starsShips = useSelector(useShipsResults)
   return (
     <>
       {starsShips?.map((starsShip, i) => {

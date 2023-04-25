@@ -11,7 +11,6 @@ function Skeleton() {
                 src=""
                 alt=""
               />
-
               <div className="p-5">
                 <h5 className="mb-2 md:w-48 w-32 h-6 bg-gray-300 rounded-md"></h5>
                 <p className="mb-3 md:w-36 w-24 h-6 bg-gray-300 rounded-md "></p>

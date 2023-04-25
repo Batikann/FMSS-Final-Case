@@ -5,6 +5,7 @@ export default {
     extend: {
       backgroundImage: {
         home: "url('./home-background.jpg')",
+        error: "url('./404page.jpg')",
       },
     },
   },

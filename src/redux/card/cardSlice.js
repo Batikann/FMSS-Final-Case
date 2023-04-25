@@ -12,10 +12,14 @@ const cardSlice = createSlice({
     isLoading: false,
     isLoadNewData: false,
     nextPage: '',
+    modalStatus: false,
   },
   reducers: {
     getNextPage: (state, action) => {
       state.nextPage = action.payload
+    },
+    showModal: (state, action) => {
+      state.modalStatus = action.payload
     },
   },
   extraReducers: (builder) => {
@@ -47,5 +51,11 @@ const cardSlice = createSlice({
   },
 })
 
-export const { getNextPage } = cardSlice.actions
+export const useShipsResults = (state) => state.cards.data.results
+export const useShips = (state) => state.cards.data
+export const useLoading = (state) => state.cards.isLoading
+export const useLoadMore = (state) => state.cards.isLoadNewData
+export const useModalStatus = (state) => state.cards.modalStatus
+
+export const { getNextPage, showModal } = cardSlice.actions
 export default cardSlice.reducer

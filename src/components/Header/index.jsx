@@ -1,7 +1,7 @@
 import { useState } from 'react'
-import { WiStars } from 'react-icons/wi'
 import { useDispatch } from 'react-redux'
-import { fetchStarsShipsByQuery } from '../../redux/service/cardServices'
+import { fetchStarsShipsByQuery } from '@/redux/service/cardServices'
+import { showModal } from '../../redux/card/cardSlice'
 
 function Header() {
   const dispatch = useDispatch()
@@ -13,7 +13,7 @@ function Header() {
       dispatch(fetchStarsShipsByQuery(val))
       setVal('')
     } else {
-      alert('Arama çubuğu boş geçilemez!!!')
+      dispatch(showModal(true))
     }
   }
 
@@ -52,7 +52,7 @@ function Header() {
           <input
             type="search"
             id="search"
-            className="block w-full p-4 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white outline-none"
+            className="block w-full p-6 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white outline-none"
             placeholder="Enter ship name or model"
             required
             value={val}
@@ -61,7 +61,7 @@ function Header() {
           <button
             type="submit"
             onClick={getDataBySearchValue}
-            className={`text-white absolute right-2.5 bottom-2.5  focus:ring-4 focus:outline-none  font-medium rounded-lg text-sm px-4 py-2 outline-none ${
+            className={`text-white absolute right-2.5 bottom-[17px]  focus:ring-4 focus:outline-none  font-medium rounded-lg text-sm px-4 py-2 outline-none ${
               val
                 ? 'dark:bg-indigo-600 dark:hover:bg-indigo-700 '
                 : 'bg-indigo-300 pointer-events-none'
