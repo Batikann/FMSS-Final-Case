@@ -63,8 +63,8 @@ function Header() {
             onClick={getDataBySearchValue}
             className={`text-white absolute right-2.5 bottom-[17px]  focus:ring-4 focus:outline-none  font-medium rounded-lg text-sm px-4 py-2 outline-none ${
               val
-                ? 'dark:bg-indigo-600 dark:hover:bg-indigo-700 '
-                : 'bg-indigo-300 pointer-events-none'
+                ? 'bg-indigo-600 hover:bg-indigo-700 '
+                : 'dark:bg-indigo-300 pointer-events-none bg-indigo-400'
             }`}
           >
             Search

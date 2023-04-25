@@ -5,7 +5,7 @@ import Page404 from './pages/Page404'
 
 function App() {
   return (
-    <div className=" bg-home min-h-screen object-cover bg-cover text-white p-8 w-full flex flex-col items-center">
+    <div className=" bg-darkMode min-h-screen object-cover bg-cover text-white p-8 w-full flex flex-col items-center">
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Home />} />

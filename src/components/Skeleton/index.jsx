@@ -4,7 +4,10 @@ function Skeleton() {
     <>
       {fakeData.map((data, i) => {
         return (
-          <div className="max-w-xs rounded-lg bg-gray-800" key={i}>
+          <div
+            className="max-w-xs rounded-lg bg-white border-gray-200 dark:bg-gray-800 dark:border-gray-700"
+            key={i}
+          >
             <div className="animate-pulse ">
               <img
                 className="rounded-t-lg w-64 h-44 bg-gray-300"

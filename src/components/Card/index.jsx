@@ -23,11 +23,16 @@ function Card() {
                 </h5>
               </Link>
               <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
-                <span className="font-semibold text-gray-400">Model:</span>
+                <span className="font-semibold text-gray-700 dark:text-gray-400">
+                  Model:
+                </span>
                 {starsShip?.model}
               </p>
               <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
-                Hyperdrive Rating:{starsShip?.hyperdrive_rating}
+                <span className="font-semibold text-gray-700 dark:text-gray-400">
+                  Hyperdrive Rating:
+                </span>
+                {starsShip?.hyperdrive_rating}
               </p>
             </div>
           </div>

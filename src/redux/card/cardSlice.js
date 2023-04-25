@@ -5,6 +5,11 @@ import {
   fetchStarsShipsByQuery,
 } from '../service/cardServices'
 
+const theme =
+  localStorage.getItem('theme') !== null
+    ? localStorage.getItem('theme')
+    : 'dark'
+
 const cardSlice = createSlice({
   name: 'cards',
   initialState: {
@@ -13,6 +18,7 @@ const cardSlice = createSlice({
     isLoadNewData: false,
     nextPage: '',
     modalStatus: false,
+    theme: theme,
   },
   reducers: {
     getNextPage: (state, action) => {
@@ -20,6 +26,10 @@ const cardSlice = createSlice({
     },
     showModal: (state, action) => {
       state.modalStatus = action.payload
+    },
+    switchTheme: (state, action) => {
+      state.theme = action.payload
+      localStorage.setItem('theme', action.payload)
     },
   },
   extraReducers: (builder) => {
@@ -56,6 +66,7 @@ export const useShips = (state) => state.cards.data
 export const useLoading = (state) => state.cards.isLoading
 export const useLoadMore = (state) => state.cards.isLoadNewData
 export const useModalStatus = (state) => state.cards.modalStatus
+export const useTheme = (state) => state.cards.theme
 
-export const { getNextPage, showModal } = cardSlice.actions
+export const { getNextPage, showModal, switchTheme } = cardSlice.actions
 export default cardSlice.reducer
