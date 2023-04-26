@@ -9,14 +9,18 @@ import Card from '../Card'
 import Loading from '../Loading'
 import Skeleton from '../Skeleton'
 import { useLoadMore, useLoading, useShips } from '@/redux/card/cardSlice'
+import { useShipsResults } from '@/redux/card/cardSlice'
 
 function ShowCase() {
   const starsShips = useSelector(useShips)
   const loading = useSelector(useLoading)
   const loadMore = useSelector(useLoadMore)
   const dispatch = useDispatch()
+  const data = useSelector(useShipsResults)
   useEffect(() => {
-    dispatch(fetchAllStartsShips())
+    if (data == null) {
+      dispatch(fetchAllStartsShips())
+    }
   }, [])
 
   const nextPageHandler = () => {
