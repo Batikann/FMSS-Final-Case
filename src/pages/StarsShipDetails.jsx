@@ -1,15 +1,16 @@
 import { Link, useParams } from 'react-router-dom'
-import { useShipDetails } from '../utils/starsShips'
+import { useShipDetails, useShipImage } from '../utils/starsShips'
 import { AiOutlineArrowLeft } from 'react-icons/ai'
 
 function StarsShipDetails() {
   const { name } = useParams()
-  const data = useShipDetails(name)[0]
+  const data = useShipDetails(name)
+  const img = useShipImage(data?.name)
   return (
-    <div className="flex  flex-col items-start">
+    <div className="flex  flex-col items-start gap-8">
       <Link
         to="/"
-        className="flex  items-center gap-x-2 uppercase font-bold bg-indigo-700 hover:bg-indigo-800 text-white justify-start py-2 px-4 rounded-lg"
+        className="flex  items-center gap-x-2 uppercase font-bold bg-indigo-700 hover:bg-indigo-800 text-white justify-start py-3 px-6 rounded-lg"
       >
         <AiOutlineArrowLeft size={24} />
         <span className="sm:flex hidden">Back</span>
@@ -21,8 +22,8 @@ function StarsShipDetails() {
               {data?.name}
             </h1>
             <img
-              className="rounded-lg w-full"
-              src="/starsship.webp"
+              className="rounded-lg w-full h-96 object-cover"
+              src={img?.imgPath}
               alt={data?.name}
             />
           </div>

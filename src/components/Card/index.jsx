@@ -2,6 +2,7 @@ import { useSelector } from 'react-redux'
 import { Link } from 'react-router-dom'
 import { convertNameToPathName } from '@/utils/starsShips'
 import { useShipsResults } from '@/redux/card/cardSlice'
+import ImageGallery from '@/data/imageGallery.json'
 
 function Card() {
   const starsShips = useSelector(useShipsResults)
@@ -14,7 +15,11 @@ function Card() {
             key={i}
           >
             <Link to={`ship/${convertNameToPathName(starsShip)}`}>
-              <img className="rounded-t-lg" src="/starsship.webp" alt="" />
+              <img
+                className="rounded-t-lg h-48 w-full object-cover"
+                src={ImageGallery[i].imgPath}
+                alt=""
+              />
             </Link>
             <div className="p-5">
               <Link to={`ship/${convertNameToPathName(starsShip)}`}>
