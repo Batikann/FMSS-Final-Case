@@ -1,4 +1,4 @@
 [[redirects]]
-  from = "/*"
-  to = "./src/pages/Page404.jsx" 
-  status = 404
+from = "/*"
+to = "/src/pages/Page404.jsx"
+status = 404
