@@ -1,3 +1,5 @@
+
+
 <h1>Project Description</h1>
 <p>I have developed a project using the SWAPI API, allowing users to search for a starship by its name or model using an input field. Users can load more starships by clicking on the "Load More" button and access a detailed page about a specific starship by clicking on it. The project is fully responsive and compatible with all devices. In case the user tries to search without entering any value, an error modal will appear.</p>
 
@@ -40,8 +42,6 @@
 
 <h5>Error Modal</h5>
 <img src="https://user-images.githubusercontent.com/71382413/234692111-1bcc120f-e07b-434d-b23c-15069955ec36.png" alt="error-modal" width="800px"/>
-
-
 
 <h5>Mobile Device Home Page</h5>
 <img src="https://user-images.githubusercontent.com/71382413/234695477-4ac8d0e6-5562-47ed-a8df-0a10cc3dff15.png" alt="mobile-home-page" width="400px" />
