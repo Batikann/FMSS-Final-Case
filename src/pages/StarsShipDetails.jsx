@@ -23,7 +23,7 @@ function StarsShipDetails() {
       <div className="relative w-full min-h-screen flex  items-center justify-center text-black ">
         <div className="grid md:grid-cols-2 place-items-center place-content-center max-w-6xl bg-white border-gray-200  p-4 gap-5 rounded-lg dark:bg-gray-800 dark:border-gray-700 text-gray-400 ">
           <div>
-            <h1 className="mb-4 text-gray-900 dark:text-white text-2xl font-bold md:text-left text-right">
+            <h1 className="mb-4 text-gray-900 dark:text-white text-2xl font-bold text-left">
               {data?.name}
             </h1>
             <img
