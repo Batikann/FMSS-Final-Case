@@ -3,6 +3,9 @@ import { Link } from 'react-router-dom'
 import { convertNameToPathName } from '@/utils/starsShips'
 import { useShipsResults } from '@/redux/card/cardSlice'
 import ImageGallery from '@/data/imageGallery.json'
+import { LazyLoadImage } from 'react-lazy-load-image-component'
+import 'react-lazy-load-image-component/src//effects/blur.css'
+import 'react-lazy-load-image-component/src//effects/opacity.css'
 
 function Card() {
   const starsShips = useSelector(useShipsResults)
@@ -15,10 +18,14 @@ function Card() {
             key={i}
           >
             <Link to={`ship/${convertNameToPathName(starsShip)}`}>
-              <img
+              <LazyLoadImage
                 className="rounded-t-lg h-48 w-full object-cover"
-                src={ImageGallery[i].imgPath}
-                alt=""
+                src={ImageGallery[i]?.imgPath}
+                alt={starsShip?.name}
+                effect="blur"
+                width="100%"
+                height={192}
+                placeholderSrc={ImageGallery[i]?.imgPath}
               />
             </Link>
             <div className="p-5">
