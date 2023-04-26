@@ -42,10 +42,13 @@
 <img src="https://user-images.githubusercontent.com/71382413/234692111-1bcc120f-e07b-434d-b23c-15069955ec36.png" alt="error-modal" width="800px"/>
 
 
+
 <h5>Mobile Device Home Page</h5>
 <img src="https://user-images.githubusercontent.com/71382413/234695477-4ac8d0e6-5562-47ed-a8df-0a10cc3dff15.png" alt="mobile-home-page" width="400px" />
+
 <h5>Mobile Device Detail Page</h5>
-<img src="https://user-images.githubusercontent.com/71382413/234693303-70c83e08-5963-4fa5-bf51-40692627eee3.png" alt="mobile-detail-page" width="400px" "/>
+<img src="https://user-images.githubusercontent.com/71382413/234697846-c04b8a82-1544-4e0b-86e4-6eecd9cd6dd2.png" alt="mobile-detail-page" width="400px" "/>
+
 
 
 
