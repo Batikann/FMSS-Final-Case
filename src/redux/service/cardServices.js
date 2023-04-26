@@ -3,6 +3,7 @@ import axios from 'axios'
 
 const API_URL = 'https://swapi.dev/api/starships/'
 
+//Here, using Redux Toolkit, we are making a request to our API with axios via the createAsyncThunk method and fetching all the data.
 export const fetchAllStartsShips = createAsyncThunk(
   'fetchAllStartsShips',
   async () => {
@@ -16,6 +17,7 @@ export const fetchAllStartsShips = createAsyncThunk(
   }
 )
 
+//We use this service when we want to load more data.
 export const fetchLoadMoreData = createAsyncThunk(
   'nextPage',
   async (nextPage) => {
@@ -29,6 +31,7 @@ export const fetchLoadMoreData = createAsyncThunk(
   }
 )
 
+//We use this service when we want to retrieve data based on the ship name or model provided by the user.
 export const fetchStarsShipsByQuery = createAsyncThunk(
   'fetchStarsShips',
   async (query) => {

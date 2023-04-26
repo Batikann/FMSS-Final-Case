@@ -6,6 +6,8 @@ import { useDispatch, useSelector } from 'react-redux'
 function Theme() {
   const dispatch = useDispatch()
   const theme = useSelector(useTheme)
+
+  //Here, there is a condition that changes our theme.
   if (theme === 'dark') {
     document.documentElement.classList.add('dark')
   } else {

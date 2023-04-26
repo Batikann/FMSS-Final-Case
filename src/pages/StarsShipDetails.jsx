@@ -3,8 +3,13 @@ import { useShipDetails, useShipImage } from '@/utils/starsShips'
 import { AiOutlineArrowLeft } from 'react-icons/ai'
 
 function StarsShipDetails() {
+  //We capture the name of the selected ship.
   const { name } = useParams()
+
+  //We retrieve the details of the selected ship based on its name.
   const data = useShipDetails(name)
+
+  //We retrieve the image of the selected ship based on its name.
   const img = useShipImage(data?.name)
   return (
     <div className="flex  flex-col items-start gap-8">

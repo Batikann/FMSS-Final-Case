@@ -8,6 +8,7 @@ function Header() {
   const dispatch = useDispatch()
   const [val, setVal] = useState('')
 
+  //"We send a request to the API based on the value entered by the user in the input and return the result. If the user tries to search without entering a value, an error modal is displayed."
   const getDataBySearchValue = async (e) => {
     e.preventDefault()
     if (val) {

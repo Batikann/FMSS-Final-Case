@@ -17,12 +17,15 @@ function ShowCase() {
   const loadMore = useSelector(useLoadMore)
   const dispatch = useDispatch()
   const data = useSelector(useShipsResults)
+
+  //If there is no data in the Redux store when the page is first loaded, our service works; otherwise, it does not work.
   useEffect(() => {
     if (data == null) {
       dispatch(fetchAllStartsShips())
     }
   }, [])
 
+  //Our function that runs when we want to load more data.
   const nextPageHandler = () => {
     if (starsShips.next != null) {
       dispatch(fetchLoadMoreData(starsShips?.next))
