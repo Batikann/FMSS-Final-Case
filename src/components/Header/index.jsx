@@ -1,7 +1,8 @@
 import { useState } from 'react'
 import { useDispatch } from 'react-redux'
 import { fetchStarsShipsByQuery } from '@/redux/service/cardServices'
-import { showModal } from '../../redux/card/cardSlice'
+import { showModal } from '@/redux/card/cardSlice'
+import { fetchAllStartsShips } from '@/redux/service/cardServices'
 
 function Header() {
   const dispatch = useDispatch()
@@ -22,7 +23,8 @@ function Header() {
       <img
         src="https://www.freeiconspng.com/uploads/star-wars-logo-png-image-0.png"
         alt="logo"
-        className="w-52 h-44 object-center"
+        className="w-52 h-44 object-center cursor-pointer"
+        onClick={() => dispatch(fetchAllStartsShips())}
       />
       <form className="md:w-[50%] md:hover:scale-110 w-full">
         <label

@@ -6,12 +6,14 @@ import ImageGallery from '@/data/imageGallery.json'
 import { LazyLoadImage } from 'react-lazy-load-image-component'
 import 'react-lazy-load-image-component/src//effects/blur.css'
 import 'react-lazy-load-image-component/src//effects/opacity.css'
+import { useShipImage } from '@/utils/starsShips'
 
 function Card() {
   const starsShips = useSelector(useShipsResults)
   return (
     <>
       {starsShips?.map((starsShip, i) => {
+        const img = useShipImage(starsShip?.name)
         return (
           <div
             className="max-w-xs bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 hover:scale-105 cursor-pointer"
@@ -20,7 +22,7 @@ function Card() {
             <Link to={`ship/${convertNameToPathName(starsShip)}`}>
               <LazyLoadImage
                 className="rounded-t-lg h-48 w-full object-cover"
-                src={ImageGallery[i]?.imgPath}
+                src={img.imgPath}
                 alt={starsShip?.name}
                 effect="blur"
                 width="100%"
