@@ -27,6 +27,11 @@
 </ul>
 
 <h2>Project Images</h3>
+
+<h3>Loading Screen</h3>
+<img src="https://user-images.githubusercontent.com/71382413/235081342-51b22be3-743d-44c0-91db-5e02c257f7a3.png" alt="loading-screen" width="800px"/>
+
+
 <h3>Dark Mode Desktop</h5>
 <img src="https://user-images.githubusercontent.com/71382413/234687046-657b5b39-7025-4cad-8719-07f196d4f2fb.png" alt="dark-mode-desktop" width="800px"/>
 <img src="https://user-images.githubusercontent.com/71382413/234687269-8c3cd017-9bac-4b3a-a35c-eecee040fcf4.png" alt="dark-mode-desktop-load-more" width="800px"/>
