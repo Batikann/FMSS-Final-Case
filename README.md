@@ -7,7 +7,7 @@
 
 <h2>How do I install the project?</h2>
 <p>Please paste the following code line in the terminal <code>git clone https://github.com/Batikann/FMSS-Final-Case.git</code></p>
-<p>Open the file named FMSS-Final-Case and write the following command lines in the terminal sequentially.</p>
+<p>Open the file named <code>FMSS-Final-Case</code> and write the following command lines in the terminal sequentially.</p>
 <p>1. <code>npm install</code></p>
 <p>2. <code>npm run dev</code></p>
 <p>Open <code>http://localhost:5173/</code> to view the application in the browser.</p>
