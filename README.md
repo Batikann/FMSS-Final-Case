@@ -3,7 +3,7 @@
 <h1>Project Description</h1>
 <p>When the page is first loaded, a loading structure is displayed on the screen to improve the user experience until the request sent to the API is returned. When the data arrives, there is a blur effect on the images until they are loaded to minimize performance losses, and the images that the user cannot see are not loaded. Initially, 10 ships are returned from our API. The user can search by ship name or model by entering it into the input field. I added 2 protection mechanisms for validation. Firstly, if the user does not enter any value, the search button remains inactive. Secondly, if the user presses the enter key, an error modal screen appears to warn the user. If the user wants to load more ships on the homepage, they can do so with the button at the bottom of the page. Similarly, when the user clicks the button to load more ships, they are faced with a loading screen until the request is returned. If the user wants to get more information about any ship on the screen, they can click on it to go to the detail page, and they can return to the homepage with the back button on the detail page. The project is fully responsive and compatible with all devices. The user can change the theme through the button located in the top right corner.</p>
 
-<a href="https://fmss-practium-final-case.netlify.app/">The live version of the project.</a>
+<a href="https://fmss-practium-final-case.netlify.app/" target="_blank">The live version of the project.</a>
 
 <h2>How do I install the project?</h2>
 <p>Please paste the following code line in the terminal <code>git clone https://github.com/Batikann/FMSS-Final-Case.git</code></p>
