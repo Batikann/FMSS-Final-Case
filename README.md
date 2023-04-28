@@ -6,13 +6,12 @@
 <a href="https://fmss-practium-final-case.netlify.app/">The live version of the project.</a>
 
 <h2>How do I install the project?</h2>
-<code>git clone https://github.com/Batikann/FMSS-Final-Case.git</code>
-<br/>
-<code>npm install</code>
-<br/>
-<code>npm run dev</code>
-<br/>
-<p>Open<code>http://localhost:5173/</code> to view the application in the browser.</p>
+<p>Please paste the following code line in the terminal <code>git clone https://github.com/Batikann/FMSS-Final-Case.git</code></p>
+<p>Open the file named FMSS-Final-Case and write the following command lines in the terminal sequentially.</p>
+<p>1. <code>cd Fmss-Final-Case</code></p>
+<p>2. <code>npm install</code></p>
+<p>3. <code>npm run dev</code></p>
+<p>Open <code>http://localhost:5173/</code> to view the application in the browser.</p>
 
 <h2>The technologies I used in this project are:</h3>
 <ul>
